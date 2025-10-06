@@ -1,5 +1,4 @@
 package com;
-
 import java.util.Scanner;
 import java.util.InputMismatchException;
 
@@ -17,7 +16,7 @@ public class FamousQuotes {
                         "You're the apple of my eye",
                 };
 
-                        System.out.println("Please select a quote (Enter 0-2): ");
+                System.out.println("Please select a quote (Enter 0-2): ");
 
                 int index = Famousquotes.nextInt();
                 System.out.println(quotes[index]);
@@ -36,6 +35,6 @@ public class FamousQuotes {
             catch (Exception e) {
                 System.out.println(e.getMessage());
             }
-            }
         }
     }
+}
