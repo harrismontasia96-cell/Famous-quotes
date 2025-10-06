@@ -14,8 +14,9 @@ public class FamousQuotes {
                         "Just do it.",
                         "You got this.",
                         "You're the apple of my eye",
+                };
 
-                        System.out.println("Please select a quote (Enter 0-2): ")};
+                        System.out.println("Please select a quote (Enter 0-2): ");
 
                 int index = Famousquotes.nextInt();
                 System.out.println(quotes[index]);
