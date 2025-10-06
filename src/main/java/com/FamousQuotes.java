@@ -8,7 +8,7 @@ public class FamousQuotes {
 
         while (run) {
             try {
-                Scanner FamousQuotes = new Scanner(System.in);
+                Scanner scanner = new Scanner(System.in);
 
                 String[] quotes = {
                         "Just do it.",
@@ -18,16 +18,21 @@ public class FamousQuotes {
 
                 System.out.println("Please select a quote (Enter 0-2): ");
 
-                int index = FamousQuotes.nextInt();
+                int index = scanner.nextInt();
+                scanner.nextLine();
                 System.out.println(quotes[index]);
 
+                System.out.println("do you want to see another quote(yes or no): ");
+                String answer = scanner.nextLine();
+                if (answer.equalsIgnoreCase("no")) {
+                    run = false;
 
-                run = false;
+                }
+
             }
             catch (InputMismatchException e) {
 
                 System.out.println("Please enter numbers only!");
-                FamousQuotes.nextLine();
             }
             catch (ArrayIndexOutOfBoundsException e) {
                 System.out.println("numbers must be between 0 and 2.");
