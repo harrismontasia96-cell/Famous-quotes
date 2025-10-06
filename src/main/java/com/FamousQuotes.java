@@ -1,6 +1,7 @@
 package com;
 
 import java.util.Scanner;
+import java.util.InputMismatchException;
 
 public class FamousQuotes {
     public static void main(String[] args) {
@@ -23,10 +24,17 @@ public class FamousQuotes {
 
 
                 run = false;
-            } catch (Exception e) {
+            }
+            catch (InputMismatchException e) {
 
+                System.out.println("Please enter numbers only!");
+                FamousQuotes.main();
+            }
+            catch (ArrayIndexOutOfBoundsException e) {
+                System.out.println("numbers must be between 0 and 2.");
+            }
+            catch (Exception e) {
                 System.out.println(e.getMessage());
-                System.out.println("Issue selecting quote, try again");
             }
             }
         }
